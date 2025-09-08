@@ -88,7 +88,7 @@ const handleUpload = (e: ChangeEvent<HTMLInputElement>, type: "user" | "cloth") 
         transition={{ duration: 0.6 }}
         className="text-4xl font-bold mb-6 text-gray-800"
       >
-        🪞 Virtual Fitting Room
+        🪞 Your stylist
       </motion.h1>
 
       {/* API Key Input */}
