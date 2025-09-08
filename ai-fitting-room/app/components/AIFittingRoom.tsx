@@ -63,8 +63,10 @@ const handleUpload = (e: ChangeEvent<HTMLInputElement>, type: "user" | "cloth") 
       const response = await ai.models.generateContent({
         model: "gemini-2.5-flash-image-preview",
         contents: [
-          { text: "Generate an image of that person wearing this T-shirt costume." },
+          { text: "Generate an image of the person in the first image wearing the costume from the second image. Preserve the person’s features, pose, and proportions, and blend the costume naturally and realistically onto them." },
+          { text: "Person image"},
           { inlineData: { mimeType: userFile.type, data: userBase64 } },
+          { text: "Cloth image"},
           { inlineData: { mimeType: clothFile.type, data: clothBase64 } },
         ],
       });
